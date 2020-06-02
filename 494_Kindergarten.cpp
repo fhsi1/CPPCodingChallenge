@@ -9,7 +9,7 @@ int main()
     string s;
     while (1)
     {
-        string s = "meep meep!";
+        getline(cin, s);
         if (cin.eof())
             break;
         int I = 0; // count of words. not index.
