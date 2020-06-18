@@ -1,34 +1,34 @@
 #include <iostream>
 #include <map>
-#include <string>
+#include <algorithm>
 
 using namespace std;
 
 int main()
 {
-    map<int, int> data;
-    int n;
-    int mx = 0, mx_k;
+    map<int, int> inti;
+    int num, counts;
+    int mx = 0;
+
     for (int i = 0; i < 10; i++)
     {
-        cin >> n;
-        if (data.find(n) == data.end())
-        {    
-            data[n] = 1;
+        cin >> num;
+
+        if (inti.find(num) == inti.end())
+        {
+            inti[num] = 1;
         }
         else
         {
-            data[n]++;
+            inti[num]++;
         }
 
-        if (mx < data[n])
+        if (mx < inti[num])
         {
-            mx = data[n];
-            mx_k = n;
+            mx = inti[num];
+            counts = num;
         }
     }
 
-    cout << mx_k << endl;
-
-    return 0;
+    cout << counts << endl;
 }
