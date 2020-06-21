@@ -7,14 +7,14 @@ int main()
 {
     int row, col, x;
     cin >> row;
-    
+
     vector<vector<int>> a(row);
 
-    for (auto &aa : a) // &aa?
+    for (auto &aa : a)
     {
         cin >> col;
-        
-        while(col--)
+
+        while (col--)
         {
             cin >> x;
             aa.push_back(x);
